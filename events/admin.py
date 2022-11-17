@@ -15,3 +15,7 @@ admin.site.register(Event)
 
 # Better practice than the above original
 @admin.register(Venue)
+	list_display = ('name', 'address', 'phone')
+
+# Sets the ordering of venues as alphabetical
+	oredering = ("name")
