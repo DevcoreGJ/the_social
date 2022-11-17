@@ -1,0 +1,22 @@
+{% extends 'events/base.html' %}
+
+{% block content %}
+
+<center>
+<h1> Hello {{ name }}! events for {{ month }} {{ year }}</h1>
+
+<!-- Time --> <h2> currently at {{ time }} </h2>
+
+<!--{{ month_number }}--> <!--test for url month being converted to a int-->
+
+<!--{{ year }} {{ month }} --> <!-- test for year and month args -->
+
+{{ cal|safe }} <!-- calling calendar from created -->
+<!-- safe filter allows html to be processed. -->
+	<!-- {{ cal }} test for calendar but comes out as raw html --> 
+<br/>
+<small>copyright (c) {{ current_year }}.</small>
+
+</center>
+
+{% endblock %}
