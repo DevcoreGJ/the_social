@@ -19,3 +19,9 @@ admin.site.register(Event)
 
 # Sets the ordering of venues as alphabetical
 	oredering = ("name")
+
+# Sets the ordering of venues as reverse alphabetical
+	# ordering = ("-name")
+
+# Creates criteria for searching Table
+	search_fields = ('name', 'address')
