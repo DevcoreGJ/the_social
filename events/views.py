@@ -9,14 +9,12 @@ def all_events(request):
 	event_list = Event.objects.all()
 	return render(request, 'events/event_list.html', {
 		'event_list':event_list
-
-
-
+		
 		})
 
 
 def home(request, year=datetime.now().year, month=datetime.now().strftime('%B')):
-	name = "Nic"
+	name = "Elliot"
 	month = month.capitalize()
 	#convert month from name to number
 	month_number = list(calendar.month_name).index(month)

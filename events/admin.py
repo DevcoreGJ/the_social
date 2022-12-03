@@ -15,13 +15,17 @@ admin.site.register(Event)
 
 # Better practice than the above original
 @admin.register(Venue)
+
+# Class containing venue admin deatails
+class VenueAdmin(admin.ModelAdmin):
 	list_display = ('name', 'address', 'phone')
 
 # Sets the ordering of venues as alphabetical
-	oredering = ("name")
+	oredering = ('name',)
 
 # Sets the ordering of venues as reverse alphabetical
-	# ordering = ("-name")
+	# ordering = ('-name')
 
 # Creates criteria for searching Table
 	search_fields = ('name', 'address')
+
